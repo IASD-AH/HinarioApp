@@ -1,7 +1,7 @@
 {
   "name": "hinario-iasd-4macos",
   "productName": "Hinario IASD 4MacOS",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Hinário Adventista App for macOS",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,14 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
     "@electron-forge/plugin-fuses": "^7.11.1",
     "@electron/fuses": "^1.8.0",
-    "electron": "^41.0.3"
+    "electron": "^41.10.7"
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
+  },
+  "allowScripts": {
+    "fs-xattr@0.3.1": true,
+    "macos-alias@0.2.12": true,
+    "electron@41.10.7": true
   }
 }

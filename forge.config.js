@@ -1,6 +1,25 @@
 const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
-const { execSync } = require('child_process');
+const { execSync, execFile } = require('child_process');
+const { promisify } = require('util');
+const fs = require('fs');
+
+// Use macOS native ditto for zip extraction (fixes yauzl/fd-slicer stream hang on Node 24+/26+)
+if (process.platform === 'darwin') {
+  try {
+    const extractZipPath = require.resolve('extract-zip');
+    require.cache[extractZipPath] = {
+      id: extractZipPath,
+      filename: extractZipPath,
+      loaded: true,
+      exports: async function (zipPath, opts) {
+        await fs.promises.mkdir(opts.dir, { recursive: true });
+        const realDir = await fs.promises.realpath(opts.dir);
+        await promisify(execFile)('/usr/bin/ditto', ['-x', '-k', zipPath, realDir]);
+      }
+    };
+  } catch (_) {}
+}
 
 module.exports = {
   packagerConfig: {
