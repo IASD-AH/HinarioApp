@@ -12,7 +12,7 @@
 
 **Aplicação desktop para macOS que reproduz vídeos de hinos da Igreja Adventista do Sétimo Dia em ecrã completo, de forma simples, rápida e sem distrações.**
 
-[Descarregar](https://github.com/filmfer/HinarioApp/releases) ·
+[Descarregar](https://github.com/IASD-AH/HinarioApp/releases) ·
 [Funcionalidades](#funcionalidades) ·
 [Instalação](#instalação) ·
 [Desenvolvimento](#desenvolvimento) ·
@@ -61,11 +61,11 @@ A aplicação é **gratuita**, de código aberto e funciona de forma totalmente 
 
 A aplicação foi desenvolvida e testada em Macs com **M1** e **M2**. Os chips **M3, M4 e M5** não foram testados por falta de hardware disponível. Como a arquitetura é a mesma (ARM64), é provável que funcione, mas não existe confirmação.
 
-Se testar num destes chips, ajude-nos a atualizar a tabela: abra uma [issue](https://github.com/filmfer/HinarioApp/issues) a indicar o modelo, a versão do macOS e se tudo funcionou corretamente.
+Se testar num destes chips, ajude-nos a atualizar a tabela: abra uma [issue](https://github.com/IASD-AH/HinarioApp/issues) a indicar o modelo, a versão do macOS e se tudo funcionou corretamente.
 
 ## Instalação
 
-1. Descarregue o ficheiro `.dmg` ou `.zip` na [página de releases](https://github.com/filmfer/HinarioApp/releases).
+1. Descarregue o ficheiro `.dmg` ou `.zip` na [página de releases](https://github.com/IASD-AH/HinarioApp/releases).
 2. Abra o `.dmg` e arraste a aplicação para a pasta **Applications**.
 3. Na primeira execução, clique com o botão direito na aplicação e escolha **Abrir**. Este passo é necessário porque a aplicação não está assinada com um Developer ID da Apple.
 4. Na janela inicial, escolha a pasta com os seus vídeos MP4.
@@ -95,7 +95,7 @@ Dependendo de onde estão os vídeos, o macOS pode pedir autorização em **Defi
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/filmfer/HinarioApp.git
+git clone https://github.com/IASD-AH/HinarioApp.git
 cd HinarioApp
 
 # Instalar dependências
@@ -147,7 +147,7 @@ HinarioApp/
 Contribuições são bem-vindas. Pode ajudar de várias formas:
 
 - Testando em Macs com **M3, M4 ou M5** e reportando o resultado
-- Reportando erros através de uma [issue](https://github.com/filmfer/HinarioApp/issues)
+- Reportando erros através de uma [issue](https://github.com/IASD-AH/HinarioApp/issues)
 - Sugerindo melhorias ou enviando um *pull request*
 
 ## Aviso
@@ -161,7 +161,7 @@ Este projeto é distribuído sob a **Licença ISC**, uma licença permissiva e d
 ```text
 ISC License
 
-Copyright (c) 2026, filmfer
+Copyright (c) 2026, Filipe Fernandes
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -206,76 +206,6 @@ SOFTWARE.
 ```
 
 O Electron inclui ainda o Chromium e outros componentes, cada um com as suas próprias licenças, disponíveis na aplicação compilada (`LICENSES.chromium.html`).
-
----
-
-<a id="english"></a>
-
-<details>
-<summary><b>🇬🇧 English version</b></summary>
-
-<br>
-
-### Hinário IASD — macOS App
-
-A desktop app for macOS that plays Seventh-day Adventist hymn videos in full screen, built for quick and distraction-free use during services.
-
-### Features
-
-- 🔎 **Hymn search**: find hymns by number or name
-- 🖥️ **Full-screen playback on any display**: play on any monitor or projector connected to your Mac
-- 🌑 **Minimalist dark interface**: clean design suited to low-light venues
-- ⌨️ **Keyboard navigation**: `↑` `↓` to browse, `Enter` to play
-- ⏹️ **Auto-close**: the player closes itself when the video ends
-- 📁 **Folder selection**: choose the folder with your MP4 videos; the setting is remembered
-
-### Requirements
-
-- macOS 11 (Big Sur) or later
-- Mac with **Apple Silicon**
-- Hymn videos in **MP4** format (not included; bring your own)
-
-### Compatibility
-
-| Chip | Status |
-|---|---|
-| Apple M1 family | ✅ Tested |
-| Apple M2 family | ✅ Tested |
-| Apple M3 / M4 / M5 | ⚠️ Not tested (no hardware available) |
-| Intel | ❌ Not supported (ARM64 builds only) |
-
-The app has been tested on **M1** and **M2** Macs. It has **not** been tested on **M3, M4 or M5** due to a lack of hardware. It should work, since the architecture is the same (ARM64), but this is unconfirmed. If you try it on one of these chips, please [open an issue](https://github.com/filmfer/HinarioApp/issues) with your Mac model, macOS version and the result.
-
-### Installation
-
-1. Download the `.dmg` or `.zip` from the [releases page](https://github.com/filmfer/HinarioApp/releases).
-2. Open the `.dmg` and drag the app into **Applications**.
-3. On first launch, right-click the app and choose **Open** (the app is not signed with an Apple Developer ID).
-4. Select the folder containing your MP4 videos.
-
-Depending on where your videos are stored, macOS may ask for **Removable Volumes** or **Full Disk Access** permission in *System Settings → Privacy & Security*.
-
-### Development
-
-```bash
-git clone https://github.com/filmfer/HinarioApp.git
-cd HinarioApp
-npm install
-npm start                              # run in development
-npm run make -- --arch=arm64           # build for Apple Silicon
-```
-
-Requires Node.js 18+. Build output goes to `out/make/`.
-
-### License
-
-Released under the **ISC License**. It is free to use, copy, modify and distribute for any purpose, including commercial use, as long as the copyright and permission notice are kept. The full text is in [`LICENSE`](LICENSE) and in the *Licença* section above. The app bundles Electron, which is MIT-licensed.
-
-### Disclaimer
-
-This is an independent project and is **not affiliated with or officially endorsed** by the Seventh-day Adventist Church. The app is only a player; you are responsible for the hymns and videos you use with it and for respecting any applicable copyrights and licenses.
-
-</details>
 
 ---
 
@@ -327,11 +257,11 @@ A desktop app for macOS that plays Seventh-day Adventist hymn videos in full scr
 | Apple M3 / M4 / M5 | ⚠️ Not tested (no hardware available) |
 | Intel | ❌ Not supported (ARM64 builds only) |
 
-The app has been tested on **M1** and **M2** Macs. It has **not** been tested on **M3, M4 or M5** due to a lack of hardware. It should work, since the architecture is the same (ARM64), but this is unconfirmed. If you try it on one of these chips, please [open an issue](https://github.com/filmfer/HinarioApp/issues) with your Mac model, macOS version and the result.
+The app has been tested on **M1** and **M2** Macs. It has **not** been tested on **M3, M4 or M5** due to a lack of hardware. It should work, since the architecture is the same (ARM64), but this is unconfirmed. If you try it on one of these chips, please [open an issue](https://github.com/IASD-AH/HinarioApp/issues) with your Mac model, macOS version and the result.
 
 ### Installation
 
-1. Download the `.dmg` or `.zip` from the [releases page](https://github.com/filmfer/HinarioApp/releases).
+1. Download the `.dmg` or `.zip` from the [releases page](https://github.com/IASD-AH/HinarioApp/releases).
 2. Open the `.dmg` and drag the app into **Applications**.
 3. On first launch, right-click the app and choose **Open** (the app is not signed with an Apple Developer ID).
 4. Select the folder containing your MP4 videos.
@@ -341,7 +271,7 @@ Depending on where your videos are stored, macOS may ask for **Removable Volumes
 ### Development
 
 ```bash
-git clone https://github.com/filmfer/HinarioApp.git
+git clone https://github.com/IASD-AH/HinarioApp.git
 cd HinarioApp
 npm install
 npm start                              # run in development
